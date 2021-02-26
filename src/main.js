@@ -1,19 +1,16 @@
 const { app, BrowserWindow } = require('electron');
 
-console.log('app = ', app);
-console.log('BrowserWindow = ', BrowserWindow);
-
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      enableRemoteModule: true // added this
+      enableRemoteModule: true
     }
   })
 
-  win.loadFile('index.html')
+  win.loadFile('src/index.html')
 }
 
 app.whenReady().then(createWindow)
