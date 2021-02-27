@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const Application = require('spectron').Application;
 const electronPath = require('electron');
